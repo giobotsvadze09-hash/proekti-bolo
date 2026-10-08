@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Foodie</title>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  
+<header>
+    <div class="nav-container">
+       
+        <div class="nav-left-group">
+            <a href="index.html" class="logo">Foodie</a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="index.html">Menu</a>
+            </nav>
+        </div>
+        
+      
+        <div class="nav-right">
+            <a href="cart.html" id="cartBtn" class="cart-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count">0</span>
+            </a>
+            
+            <a href="#" class="profile-icon-btn">
+                <i class="fa-solid fa-user"></i>
+            </a>
+        </div>
+    </div>
+</header>
+<div class="cart-page-wrapper">
+        <h1 class="cart-title">Shopping Cart</h1>
+        <p class="items-count-text">0 items</p>
+
+        <div class="cart-content-layout">
+            
+            <div class="cart-items-container" id="cartItemsContainer">
+               
+            </div>
+
+          
+            <div class="order-summary-card">
+                <h2>Order Summary</h2>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="subtotalPrice">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax (10%)</span>
+                    <span id="taxPrice">$0.00</span>
+                </div>
+                <div class="summary-row total-row">
+                    <span>Total</span>
+                    <span id="totalPrice">$0.00</span>
+                </div>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+   
+    <main class="cart-main-container"></main>
+
+    
+    <script src="cart.js"></script>
+</body>
+</html>

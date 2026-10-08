@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie - Create Account</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome ხატულებისათვის (თვალის აიქონი და ა.შ.) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="auth-body">
+
+    <div class="auth-card">
+        <h2>Create Account</h2>
+        <p class="auth-subtitle">Join us today</p>
+
+        <form id="registerForm">
+            <div class="name-row">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" placeholder="John" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" placeholder="Doe" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="reras58782@maxtanie.com" required>
+            </div>
+
+            <div class="form-group password-group">
+                <label for="password">Password</label>
+                <div class="password-input-wrapper">
+                    <input type="password" id="password" placeholder="••••••••••" required>
+                    <i class="fa-regular fa-eye toggle-password" id="togglePassword"></i>
+                </div>
+            </div>
+
+            <ul class="password-requirements">
+                <li>At least 8 characters</li>
+                <li>Uppercase and lowercase letters</li>
+                <li>At least one number</li>
+            </ul>
+
+            <button type="submit" class="auth-submit-btn">Create Account</button>
+        </form>
+
+        <p class="auth-footer-text">Already have an account? <a href="#">Sign in</a></p>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>

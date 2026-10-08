@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie - Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">Foodie</div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="menu.html" class="active">Menu</a>
+            </nav>
+            <div class="nav-right">
+                <a href="#" class="cart-icon" id="cartBtn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="#" class="login-btn">Login</a>
+                <a href="#" class="signup-btn">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    
+    <div class="menu-page-container">
+        
+        <aside class="filters-sidebar">
+            <h2>Filters</h2>
+            
+            <div class="filter-group">
+                <label for="searchDish">Search</label>
+                <input type="text" id="searchDish" placeholder="Search dishes...">
+            </div>
+
+            <div class="filter-group">
+                <label>Categories</label>
+                <div class="checkbox-list">
+                    <label><input type="checkbox"> Desserts</label>
+                    <label><input type="checkbox"> First Courses</label>
+                    <label><input type="checkbox"> Main Courses</label>
+                    <label><input type="checkbox"> Pizzas</label>
+                    <label><input type="checkbox"> Side Dishes</label>
+                    <label><input type="checkbox"> Appetizers</label>
+                </div>
+            </div>
+
+            <div class="filter-group toggle-group">
+                <span>Vegetarian Only</span>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <div class="filter-group">
+                <label>Spiciness (0-5)</label>
+                <input type="range" min="0" max="5" value="0" class="range-slider">
+                <span class="range-label">Level: not selected</span>
+            </div>
+
+            <div class="filter-group">
+                <label>Minimum Rating</label>
+                <input type="range" min="0" max="5" value="0" class="range-slider">
+                <span class="range-label">0.0+</span>
+            </div>
+
+            <div class="filter-group">
+                <label>Min price</label>
+                <input type="range" min="0" max="50" value="0" class="range-slider">
+            </div>
+
+            <div class="filter-group">
+                <label>Max price</label>
+                <input type="range" min="0" max="500" value="500" class="range-slider">
+                <span class="range-label">$500+</span>
+            </div>
+
+            <button class="clear-filters-btn">Clear All Filters</button>
+        </aside>
+
+      
+        <main class="menu-content">
+            <div class="menu-header-info">
+                <h1>Menu</h1>
+                <p>Showing 10 products</p>
+            </div>
+
+            <div class="dishes-grid">
+               
+                <div class="dish-card">
+                    <div class="dish-img-container"><img src="dish1.jpg" alt="Sfogliatelle"></div>
+                    <div class="dish-info">
+                        <h3>Sfogliatelle</h3>
+                        <p>Flaky, shell-shaped pastries filled with sweet ricotta and candied citrus.</p>
+                        <div class="dish-rating"><i class="fa-solid fa-star"></i> <span>2.7</span></div>
+                        <div class="dish-footer"><span class="price">$8.00</span><button class="add-to-cart-btn">Add to Cart</button></div>
+                    </div>
+                </div>
+
+            
+                <div class="dish-card">
+                    <div class="dish-img-container"><img src="dish2.jpg" alt="Affogato"></div>
+                    <div class="dish-info">
+                        <h3>Affogato</h3>
+                        <p>Vanilla gelato "drowned" in hot espresso.</p>
+                        <div class="dish-rating"><i class="fa-solid fa-star"></i> <span>3.9</span></div>
+                        <div class="dish-footer"><span class="price">$6.50</span><button class="add-to-cart-btn">Add to Cart</button></div>
+                    </div>
+                </div>
+
+           
+                <div class="dish-card">
+                    <div class="dish-img-container"><img src="dish3.jpg" alt="Cassata Siciliana"></div>
+                    <div class="dish-info">
+                        <h3>Cassata Siciliana</h3>
+                        <p>Elaborate Sicilian cake with ricotta, marzipan, candied fruit, and decorative icing.</p>
+                        <div class="dish-rating"><i class="fa-solid fa-star"></i> <span>5.0</span></div>
+                        <div class="dish-footer"><span class="price">$11.00</span><button class="add-to-cart-btn">Add to Cart</button></div>
+                    </div>
+                </div>
+
+                <div class="dish-card">
+                    <div class="dish-img-container"><img src="dish4.jpg" alt="Cannoli Siciliani"></div>
+                    <div class="dish-info">
+                        <h3>Cannoli Siciliani</h3>
+                        <p>Crispy fried pastry tubes filled with sweetened ricotta cheese and chocolate chips.</p>
+                        <div class="dish-rating"><i class="fa-solid fa-star"></i> <span>1.1</span></div>
+                        <div class="dish-footer"><span class="price">$8.50</span><button class="add-to-cart-btn">Add to Cart</button></div>
+                    </div>
+                </div>
+
+               
+                <div class="dish-card">
+                    <div class="dish-img-container"><img src="dish5.jpg" alt="Gelato"></div>
+                    <div class="dish-info">
+                        <h3>Gelato (Assorted Flavors)</h3>
+                        <p>Italian ice cream known for its dense, rich texture and intense flavors.</p>
+                        <div class="dish-rating"><i class="fa-solid fa-star"></i> <span>1.2</span></div>
+                        <div class="dish-footer"><span class="price">$6.00</span><button class="add-to-cart-btn">Add to Cart</button></div>
+                    </div>
+                </div>
+
+                
+                <div class="dish-card">
+                    <div class="dish-img-container"><img src="dish6.jpg" alt="Torta Caprese"></div>
+                    <div class="dish-info">
+                        <h3>Torta Caprese</h3>
+                        <p>Rich, flourless chocolate and almond cake from the island of Capri.</p>
+                        <div class="dish-rating"><i class="fa-solid fa-star"></i> <span>3.4</span></div>
+                        <div class="dish-footer"><span class="price">$10.00</span><button class="add-to-cart-btn">Add to Cart</button></div>
+                    </div>
+                </div>
+
+                
+                <div class="dish-card">
+                    <div class="dish-img-container"><img src="dish7.jpg" alt="Crostata di Frutta"></div>
+                    <div class="dish-info">
+                        <h3>Crostata di Frutta</h3>
+                        <p>Traditional Italian fruit tart with pastry cream and fresh seasonal fruits.</p>
+                        <div class="dish-rating"><i class="fa-solid fa-star"></i> <span>4.5</span></div>
+                        <div class="dish-footer"><span class="price">$9.00</span><button class="add-to-cart-btn">Add to Cart</button></div>
+                    </div>
+                </div>
+
+              
+                <div class="dish-card">
+                    <div class="dish-img-container"><img src="dish8.jpg" alt="Zabaione"></div>
+                    <div class="dish-info">
+                        <h3>Zabaione</h3>
+                        <p>Light custard dessert made with egg yolks, sugar, and sweet wine.</p>
+                        <div class="dish-rating"><i class="fa-solid fa-star"></i> <span>4.0</span></div>
+                        <div class="dish-footer"><span class="price">$7.00</span><button class="add-to-cart-btn">Add to Cart</button></div>
+                    </div>
+                </div>
+
+             
+                <div class="dish-card">
+                    <div class="dish-img-container"><img src="dish9.jpg" alt="Caponata"></div>
+                    <div class="dish-info">
+                        <h3>Caponata</h3>
+                        <p>Sweet and sour Sicilian eggplant dish with celery, olives, and capers.</p>
+                        <div class="dish-rating"><i class="fa-solid fa-star"></i> <span>2.6</span></div>
+                        <div class="dish-footer"><span class="price">$8.00</span><button class="add-to-cart-btn">Add to Cart</button></div>
+                    </div>
+                </div>
+
+            
+                <div class="dish-card">
+                    <div class="dish-img-container"><img src="dish10.jpg" alt="Peperonata"></div>
+                    <div class="dish-info">
+                        <h3>Peperonata</h3>
+                        <p>Slow-cooked sweet peppers with onions and tomatoes.</p>
+                        <div class="dish-rating"><i class="fa-solid fa-star"></i> <span>2.8</span></div>
+                        <div class="dish-footer"><span class="price">$7.50</span><button class="add-to-cart-btn">Add to Cart</button></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <span>Next ></span>
+            </div>
+        </main>
+    </div>
+
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3 class="footer-logo">Foodie</h3>
+                <p>Delicious food delivered to your door.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>Created by: IT Academy STEP Georgia</p></div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

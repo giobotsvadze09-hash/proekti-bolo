@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie - Profile Settings</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <header class="header">
+    <div class="nav-container">
+        <a href="index.html" class="logo">Foodie</a>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+        </nav>
+        <div class="nav-right">
+            <a href="cart.html" class="cart-icon" id="cartBtn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count">0</span>
+            </a>
+            <a href="profile.html" class="login-btn active">👤 Profile</a>
+        </div>
+    </div>
+</header>
+
+   
+    <div class="profile-container">
+        <h1 class="profile-title">Profile Settings</h1>
+
+        <div class="profile-tabs">
+            <button class="tab-btn active" onclick="switchTab(event, 'personalInfo')">Personal Info</button>
+            <button class="tab-btn" onclick="switchTab(event, 'changePassword')">Change Password</button>
+            <button class="tab-btn" onclick="switchTab(event, 'accountSettings')">Account Settings</button>
+        </div>
+
+    
+        <div id="personalInfo" class="profile-card tab-content active">
+            <div class="card-header">
+                <h3>Personal Information</h3>
+                <p>Update your personal details</p>
+            </div>
+            <div class="avatar-box">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <form id="profileUpdateForm">
+                <div class="form-group">
+                    <label>Picture URL</label>
+                    <input type="text" id="profilePic" placeholder="https://example.com/avatar.jpg">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" id="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" id="lastName" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="email" disabled style="background: #eee; cursor: not-allowed;">
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="text" id="phone" placeholder="+995 ...">
+                </div>
+                <div class="form-group">
+                    <label>Address</label>
+                    <textarea id="address" rows="3" placeholder="Enter your address"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Age</label>
+                    <input type="number" id="age" placeholder="Age">
+                </div>
+                <button type="submit" class="save-btn">Save Changes</button>
+            </form>
+        </div>
+
+        <div id="changePassword" class="profile-card tab-content">
+            <div class="card-header">
+                <h3>Change Password</h3>
+                <p>Ensure your account is using a secure password</p>
+            </div>
+            <form id="passwordChangeForm">
+                <div class="form-group">
+                    <label>Current Password</label>
+                    <input type="password" id="currentPassword" required>
+                </div>
+                <div class="form-group">
+                    <label>New Password</label>
+                    <input type="password" id="newPassword" required>
+                </div>
+                <div class="form-group">
+                    <label>Confirm New Password</label>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+                <button type="submit" class="save-btn">Update Password</button>
+            </form>
+        </div>
+
+        
+        <div id="accountSettings" class="profile-card tab-content">
+            <div class="card-header">
+                <h3>Account Settings</h3>
+                <p>Manage your account actions</p>
+            </div>
+            <p style="margin-bottom: 15px; color: #555;">If you want to log out from all devices or terminate your session:</p>
+            <button id="profileLogoutBtn" style="background: #e53935; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-weight: 600;">Log Out</button>
+        </div>
+    </div>
+
+    <script>
+      
+        function switchTab(evt, tabName) {
+            const contents = document.querySelectorAll(".tab-content");
+            contents.forEach(c => c.classList.remove("active"));
+
+            const buttons = document.querySelectorAll(".tab-btn");
+            buttons.forEach(b => b.classList.remove("active"));
+
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
